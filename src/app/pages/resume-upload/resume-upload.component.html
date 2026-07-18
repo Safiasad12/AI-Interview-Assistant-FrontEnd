@@ -1,1 +1,48 @@
-<p>resume-upload works!</p>
+<div class="upload-container">
+
+    <mat-card class="upload-card">
+
+        <h1>Upload Your Resume</h1>
+
+        <p>
+            Upload your resume in PDF format to start your AI interview.
+        </p>
+
+        <input
+            type="file"
+            accept=".pdf"
+            #fileInput
+            hidden
+            (change)="onFileSelected($event)">
+
+        <button
+            mat-raised-button
+            color="primary"
+            (click)="fileInput.click()">
+
+            Choose Resume
+
+        </button>
+
+        @if(selectedFile){
+
+            <div class="file-name">
+
+                📄 {{ selectedFile.name }}
+
+            </div>
+
+        }
+
+        <button
+            mat-raised-button
+            color="accent"
+            [disabled]="!selectedFile">
+
+            Upload Resume
+
+        </button>
+
+    </mat-card>
+
+</div>

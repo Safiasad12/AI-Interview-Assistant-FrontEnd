@@ -1,0 +1,32 @@
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.upload-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+p {
+    color: gray;
+    margin-bottom: 25px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.file-name {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #1976d2;
+}
