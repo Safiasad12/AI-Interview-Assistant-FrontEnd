@@ -37,9 +37,10 @@
         <button
             mat-raised-button
             color="accent"
-            [disabled]="!selectedFile">
+            [disabled]="!selectedFile || isUploading"
+            (click)="uploadResume()">
 
-            Upload Resume
+            {{ isUploading ? 'Uploading...' : 'Upload Resume' }}
 
         </button>
 
