@@ -1,51 +1,48 @@
 <div class="container">
 
-    @if(loading){
+    @if (loading) {
 
-        <h2>Analyzing Resume...</h2>
+        <div class="loading-container">
+
+            <mat-spinner diameter="60"></mat-spinner>
+
+            <h2>Analyzing your resume...</h2>
+
+            <p>Please wait while AI reviews your resume.</p>
+
+        </div>
 
     }
 
-    @else if(analysis){
+    @else if (analysis) {
 
         <mat-card>
 
             <h1>Resume Analysis</h1>
 
             <h3>Summary</h3>
-
             <p>{{ analysis.summary }}</p>
 
             <h3>Experience</h3>
-
             <p>{{ analysis.experience }}</p>
 
             <h3>Recommended Role</h3>
-
             <p>{{ analysis.recommended_role }}</p>
 
             <h3>Skills</h3>
 
             <ul>
-
-                @for(skill of analysis.skills; track skill){
-
+                @for (skill of analysis.skills; track skill) {
                     <li>{{ skill }}</li>
-
                 }
-
             </ul>
 
             <h3>Strengths</h3>
 
             <ul>
-
-                @for(strength of analysis.strengths; track strength){
-
+                @for (strength of analysis.strengths; track strength) {
                     <li>{{ strength }}</li>
-
                 }
-
             </ul>
 
         </mat-card>

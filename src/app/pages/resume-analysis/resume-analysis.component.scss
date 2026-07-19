@@ -1,20 +1,30 @@
-.container{
-    width:80%;
-    margin:40px auto;
+.container {
+    width: 80%;
+    margin: 40px auto;
 }
 
-mat-card{
-    padding:30px;
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+    gap: 20px;
 }
 
-h1{
-    margin-bottom:20px;
+mat-card {
+    padding: 30px;
 }
 
-h3{
-    margin-top:20px;
+h1 {
+    margin-bottom: 20px;
 }
 
-ul{
-    padding-left:20px;
+h3 {
+    margin-top: 20px;
+}
+
+ul {
+    padding-left: 20px;
 }
