@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { environment } from '../../environments/environment'; 
 import { ResumeUploadResponse } from '../models/resume-upload-response';
+import { ResumeAnalysisResponse } from '../models/resume-analysis-response';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +24,12 @@ export class ResumeService {
       formData
     );
   }
+
+  analyzeResume() {
+  return this.http.post<ResumeAnalysisResponse>(
+    `${environment.apiUrl}/resume/analyze`,
+    {}
+  );
+}
 
 }
